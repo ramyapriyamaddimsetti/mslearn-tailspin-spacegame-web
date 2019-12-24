@@ -9,7 +9,7 @@ trigger:
 pool:
   vmImage: 'ubuntu-16.04'
   demands:
-  -npm
+  - npm
 
 variables:
   buildConfiguration: 'Release'
@@ -18,9 +18,9 @@ steps:
 - task: UseDotNet@2
   displayName: 'Use .NET Core SDK 2.1.505'
   inputs:
-     packageType: sdk
-     version: 2.1.505
-     
+    packageType: sdk
+    version: 2.1.505
+
 - task: Npm@1
   displayName: 'Run npm install'
   inputs:
@@ -47,5 +47,4 @@ steps:
   inputs:
     command: 'build'
     arguments: '--no-restore --configuration Release'
-    projects: '**/*.csproj'     
-
+    projects: '**/*.csproj'
