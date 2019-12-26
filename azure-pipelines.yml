@@ -43,7 +43,6 @@ steps:
     restoreSolution: '**/*.sln'
     feedsToUse: 'select'
     vstsFeed: '3ab3f69c-a8c4-429c-b140-44f863611ce7/ece0bff6-8081-4c77-84e6-a27c29ff05c3'
-    includeNuGetOrg: false
 
 - task: DotNetCoreCLI@2
   displayName: 'Build the project - $(buildConfiguration)'
