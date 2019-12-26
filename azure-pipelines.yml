@@ -36,10 +36,8 @@ steps:
   displayName: 'Write build info'
   workingDirectory: $(wwwrootDir)
 
-
-
  - task: NuGetCommand@2
-    displayName: 'Restore Project Dependencies'
+   displayName: 'Restore Project Dependencies'
     inputs:
       command: 'restore'
       restoreSolution: '**/*.sln'
